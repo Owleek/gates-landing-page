@@ -2,4 +2,134 @@
 @import "default";
 @import "mixin";
 
+.header {
+    &__topBar {
+        color: $gray;
+        background-color: $bgBlue;
 
+        a {
+            color: $gray;
+        }
+    }
+
+    &__topBarContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        .nav__item {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__menuAction {
+        display: flex;
+    }
+
+    &__auth {
+        margin-right: 30px;
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        padding: 16px 0px;
+    }
+
+    &__item {}
+}
+
+.dropdown {
+    cursor: pointer;
+    white-space: nowrap;
+
+    &__subject {
+        margin-right: 12px;
+    }
+
+    &__subject,
+    &__icon {
+        display: inline-block;
+        user-select: none;
+    }
+
+    &__icon {
+        font-size: 0;
+    }
+}
+
+.auth {
+    display: flex;
+    align-items: center;
+
+    &__item {
+        &_sigIn {
+            .auth__icon,
+            .auth__text {
+                vertical-align: middle;
+            }
+
+            margin-right: 30px;
+        }
+
+        &_sigUp {}
+    }
+
+    &__itemInner {
+        white-space: nowrap;
+    }
+
+    &__icon,
+    &__text {
+        display: inline-block;
+    }
+
+    &__icon {
+        margin-right: 5px;
+        font-size: 0;
+    }
+
+    &__text {}
+
+    a {
+        display: block;
+        text-decoration: none !important;
+    }
+}
+
+.search {
+    background-color: #274f64;
+    display: flex;
+
+    &__field {
+        input {
+            border: 0;
+            color: $gray;
+            height: 100%;
+            padding: 16px 0px 16px 20px;
+            background: transparent;
+            max-width: 155px;
+            
+            &::placeholder {
+                color: $gray;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: 0;
+        width: 55px;
+        position: relative;
+        cursor: pointer;
+
+        .searchIcon {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

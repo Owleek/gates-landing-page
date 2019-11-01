@@ -1,0 +1,119 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Proxima Nova Rg', sans-serif;
+    line-height: 1.3;
+    color: #606060;
+    min-width: 320px;
+    font-size: 0.875rem;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, h4 {
+    color: $black;
+    font-weight: bold;
+    margin: 0rem 0rem 1.5rem 0rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5625rem;
+}
+
+h3 {
+    font-size: 1.125rem;
+}
+
+h4, h5 {
+    font-size: 1rem;
+}
+
+p {
+    margin: 0rem 0rem 1.5rem 0rem;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.15s ease-in;
+}
+
+a:hover {
+    text-decoration: underline
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+b {
+    font-family: 'Proxima Nova Rg', sans-serif;
+    font-weight: bold;
+}
+
+.button {
+    border: none;
+    padding: 14px 35px;
+    font-size: 0.875rem;
+    color: $black;
+    background: transparent;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    text-decoration: none !important;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+
+    &:hover {
+        color: inherit;
+    }
+
+    &_block {
+        display: block;
+        width: 100%;
+    }
+}
+
+.layout-center {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.image-wrapper,
+.video-wrapper {
+    position: relative;
+
+    &:before {
+        display: block;
+        padding-top: 50%;
+        content: "";
+    }
+
+    .image,
+    .video {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+
+        img,
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

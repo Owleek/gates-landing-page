@@ -349,27 +349,77 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .navBar {
+    font-family: 'Proxima Nova Lt', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: $black;
     background-color: #F0F0F0;
+
+    &__inner {
+        display: flex;
+    }
+
+    a {
+        color: $black !important;
+        text-decoration: none !important;
+        display: inline-block;
+    }
+}
+
+.catalogueMenu {
+    display: inline-block;
+
+    &__inner {
+        white-space: nowrap;
+        padding: 25px 30px;
+    }
+    
+    &__icon,
+    &__title {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    &__icon {
+        margin-right: 10px;
+    }
+    
+    &__title {}
 }
 
 .categories {
-    padding: 24px 0px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        align-self: stretch;
+
+        &:first-child {
+            .categories__title {
+                padding-left: 30px;
+            }
+        }
+
+        &:last-child {
+            .categories__title {
+                padding-right: 0px;
+            }
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+    .categories__title {
+        display: inline-block;
+        padding: 0px 20px;
+    }
 }

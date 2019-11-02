@@ -172,6 +172,17 @@ b {
     height: 15px;
 }
 
+.menuIcon {
+    width: 13px;
+    height: 13px;
+
+    fill: #3d768d;
+    
+    path {
+        fill: #3d768d;
+    }
+}
+
 .burgerIcon,
 .loginIcon,
 .userIcon,
@@ -194,4 +205,8 @@ b {
     path {
         fill: $secondary;
     }
+}
+
+.highlighted {
+    background-color: #ebebeb;
 }

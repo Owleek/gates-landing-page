@@ -23,6 +23,18 @@
 }
 
 @font-face {
+    font-family: 'Proxima Nova Th';
+    src: url('../fonts/ProximaNova-Extrabld.eot');
+    src: url('../fonts/ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ProximaNova-Extrabld.woff2') format('woff2'),
+        url('../fonts/ProximaNova-Extrabld.woff') format('woff'),
+        url('../fonts/ProximaNova-Extrabld.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'Proxima Nova Rg';
     src: url('../fonts/ProximaNova-Bold.eot');
     src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),

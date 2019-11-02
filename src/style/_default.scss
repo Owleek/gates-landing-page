@@ -87,7 +87,7 @@ b {
     }
 }
 
-.layout-center {
+.layoutCenter {
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -142,15 +142,56 @@ b {
     height: 15px;
 }
 
+.phoneIcon {
+    width: 17px;
+    height: 17px;
+}
+
+.messageIcon {
+    width: 21px;
+    height: 15px;
+}
+
+.shoppingCartIcon {
+    width: 42px;
+    height: 46px;
+    fill: #1f5f7a;
+
+    path {
+        fill: #1f5f7a;
+    }
+}
+
+.clipboardIcon {
+    width: 15px;
+    height: 18px;
+}
+
+.bookmarkIcon {
+    width: 15px;
+    height: 15px;
+}
 
 .burgerIcon,
 .loginIcon,
 .userIcon,
-.searchIcon {
+.searchIcon,
+.bookmarkIcon {
     fill: $gray;
         
     path {
         fill: $gray;
         fill-rule: evenodd;
+    }
+}
+
+
+.phoneIcon,
+.messageIcon,
+.clipboardIcon {
+    fill: $secondary;
+    
+    path {
+        fill: $secondary;
     }
 }

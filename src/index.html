@@ -20,7 +20,7 @@
 <body>
     <header class="header">
         <div class="header__topBar">
-            <div class="layout-center">
+            <div class="layoutCenter">
                 <div class="header__topBarContainer">
                     <nav class="nav header__nav">
                         <ul class="nav__list">
@@ -113,12 +113,159 @@
                             </span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="header__mainContent"></div>
+                </div><!-- /header__topBarContainer -->
+            </div><!-- /layoutCenter -->
+        </div><!-- /header__topBar -->
+        <div class="header__mainContentWrapper">
+            <div class="layoutCenter">
+                <div class="header__mainContent">
+                    <div class="header__logoHolder">
+                        <div class="logo">
+                            <a href="">
+                                <div class="logo__inner">
+                                    <span class="logo__pic">
+                                        <img src="images\logo.png" alt="">
+                                    </span>
+                                    <span class="logo__text">
+                                        Индустрия Ворот
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__contacts">
+                        <div class="header__contactsColumn">
+                            <div class="header__contactItem">
+                                <span class="header__contactSubject">
+                                    <a href="">
+                                        8 (800) 123-45-67
+                                    </a>
+                                </span>
+                                <span class="header__contactText">
+                                    Для регионов РФ (звонок бесплатный)
+                                </span>
+                            </div>
+                            <div class="header__contactItem">
+                                <span class="header__contactSubject">
+                                    <a href="">
+                                        8 (495) 123-45-67
+                                    </a>
+                                </span>
+                                <span class="header__contactText">
+                                    Москва (многоканальный)
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="header__contactsColumn">
+                            <div class="header__contactItem">
+                                <span class="header__contactSubject">
+                                    Пн-Пт: с 9 до 18
+                                </span>
+                                <span class="header__contactText">
+                                    Сб: с 10 до 16 / Вс: выходной
+                                </span>
+                            </div>
+                            <div class="header__contactItem">
+                                <span class="header__contactSubject">
+                                    г. Москва
+                                </span>
+                                <span class="header__contactText">
+                                    Москва (многоканальный)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feedback header__feedback">
+                        <div class="feedback__item">
+                            <a href="">
+                                <span class="feedback__itemInner">
+                                    <span class="feedback__icon">
+                                        <svg class="phoneIcon">
+                                            <use xlink:href="#phone" />
+                                        </svg>
+                                    </span>
+                                    <span class="feedback__text feedback__text_underline">
+                                        Перезвонить Вам?
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="feedback__item">
+                            <a href="">
+                                <span class="feedback__itemInner">
+                                    <span class="feedback__icon">
+                                        <svg class="messageIcon">
+                                            <use xlink:href="#message" />
+                                        </svg>
+                                    </span>
+                                    <span class="feedback__text">
+                                        Есть вопросы? Пишите!
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header__shopping">
+                        <div class="shoppingCart">
+                            <span class="shoppingCart__icon">
+                                <svg class="shoppingCartIcon">
+                                    <use xlink:href="#shoppingCart" />
+                                </svg>
+                                <span class="shoppingCart__goodsCounter">
+                                    1
+                                </span>
+                            </span>
+                            <span class="shoppingCart__info">
+                                <span class="shoppingCart__designation">
+                                    Ваша корзина
+                                </span>
+                                <span class="shoppingCart__productInfo">
+                                    1 товар 3495 руб.
+                                </span>
+                            </span>
+                        </div>
+                        <div class="shoppingFunctions header__shoppingFunctions">
+                            <div class="shoppingFunctions__item">
+                                <a href="">
+                                    <span class="shoppingFunctions__itemInner">
+                                        <span class="shoppingFunctions__icon">
+                                            <svg class="clipboardIcon">
+                                                <use xlink:href="#clipboard" />
+                                            </svg>
+                                        </span>
+                                        <span class="shoppingFunctions__text">
+                                            Сравнение
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="shoppingFunctions__item">
+                                <a href="">
+                                    <span class="shoppingFunctions__itemInner">
+                                        <span class="shoppingFunctions__icon">
+                                            <svg class="bookmarkIcon">
+                                                <use xlink:href="#bookmark" />
+                                            </svg>
+                                        </span>
+                                        <span class="shoppingFunctions__text">
+                                            Закладки
+                                        </span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /header__mainContent -->
+            </div><!-- /layoutCenter -->
+        </div><!-- /header__mainContentWrapper -->
     </header>
     <nav class="navBar">
+        <div class="layoutCenter">
+            <div class="navBar__inner">
+                <ul class="categories"></ul>
+            </div><!-- /navBar__inner -->
+        </div><!-- /layoutCenter -->
     </nav>
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none">
         <symbol viewBox="0 0 444.815 444.815" id="arrow" xmlns="http://www.w3.org/2000/svg">

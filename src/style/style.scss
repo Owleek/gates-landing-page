@@ -423,3 +423,74 @@
         padding: 0px 20px;
     }
 }
+
+.postScreen {
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
+    color: #ffffff;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    
+    &__inner {
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__breadcrumb {
+        padding-top: 35px;
+    }
+
+    &__content {
+        max-width: 800px;
+        margin-top: auto;
+    }
+
+    &__labelHolder {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        color: #ffffff;
+    }
+
+    &__metainfo{
+        padding-bottom: 45px;
+    }
+}
+
+.postLabel {
+    padding: 5px 9px;
+    border-radius: 3px;
+    background-color: $green;
+}
+
+.metainfo {
+
+    &__item {
+        white-space: nowrap;
+
+        &:first-child {
+            margin-right: 15px;
+        }
+    }
+
+    &__icon {
+        font-size: 0;
+        margin-right: 6px;
+    }
+
+    &__text {}
+
+    &__item,
+    &__icon,
+    &__text {
+        display: inline-block;
+    }
+
+    &__icon,
+    &__text {
+        vertical-align: middle;
+    }
+}

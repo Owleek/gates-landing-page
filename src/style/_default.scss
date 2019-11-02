@@ -183,6 +183,36 @@ b {
     }
 }
 
+.clockIcon {
+    width: 15px;
+    height: 15px;
+ 
+    fill: $secondary;
+    
+    path {
+        fill: $secondary;
+    }
+
+    &_green {
+        fill: $green;
+    
+        path {
+            fill: $green;
+        }
+    }
+}
+
+.eyeIcon {
+    width: 34px;
+    height: 20px;
+
+    fill: $green;
+
+    path {
+        fill: green;
+    }
+}
+
 .burgerIcon,
 .loginIcon,
 .userIcon,
@@ -209,4 +239,34 @@ b {
 
 .highlighted {
     background-color: #ebebeb;
+}
+
+.breadcrumb {
+    padding: 20px 0px;
+    color: #ffffff;
+
+    &__item {
+        display: inline;
+
+        &+&:before {
+            content: "/\00a0";
+            padding-left: 5px;
+            color: #ffffff;
+        }
+
+        &_current {
+            font-family: 'Proxima Nova Rg';
+            font-weight: normal;
+        }
+    }
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+
+        &:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+    }
 }

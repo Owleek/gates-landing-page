@@ -62,10 +62,14 @@ b {
 }
 
 .button {
+    font-family: 'Proxima Nova Lt';
+    font-weight: 600;
     border: none;
     padding: 14px 35px;
     font-size: 0.875rem;
     color: $black;
+    border: 1px solid #e3e3e3;
+    border-radius: 25px;
     background: transparent;
     display: inline-block;
     overflow: hidden;
@@ -78,12 +82,28 @@ b {
     transition: all 0.15s ease-in;
 
     &:hover {
-        color: inherit;
+        background-color: #f6f6f6;
     }
 
     &_block {
         display: block;
         width: 100%;
+        
+    }
+
+    &_back {
+        padding-left: 45px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            transform: rotate(180deg) translateY(50%);
+            background: url("../images/svg/arrow.svg") 50% 50% no-repeat;
+            background-size: cover;
+            left: 25px; top: 50%;
+        }
     }
 }
 

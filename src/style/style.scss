@@ -519,6 +519,127 @@
     }
 }
 
+.article {
+    padding-top: 55px;
+    
+
+    mark {
+        display: block;
+        color: #606060;
+        padding: 30px;
+        background-color: #f6f6f6;
+        border-left: 1px solid #95cd57;
+        line-height: 1.6;
+    }
+
+    nobr {
+        color: #ffffff;
+        user-select: none;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+}
+
+.img_align_right {
+    float: right;
+    margin-left: 30px;
+}
+
+.clearfix {
+    &:after {
+        content: "";
+        clear: right;
+        display: block;
+        height: 0;
+    }
+}
+
+.module_3_img {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    img {
+        flex-basis: 30%;
+    }
+}
+
+.anotherMaterials {
+    &__heading {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    &__buttonHolder {
+        margin-left: auto;
+    }
+
+    &__posts {
+        padding-bottom: 70px;
+        overflow: hidden;
+    }
+
+    .post {
+        display: flex;
+        margin-right: -30px;
+    
+        &__item {
+            flex-basis: 25%;
+            display: flex;            
+            padding-right: 30px;
+        }
+    
+        &__picture {
+            flex-basis: 38%;
+            margin-right: 20px;
+            flex-shrink: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        &__info {}
+    
+        &__title {
+            margin-bottom: 12px;
+
+            a {
+                color: $blue;
+                // text-decoration: underline;
+
+               &:visited {
+                    color: $black;
+                    text-decoration: none;
+                }
+            }
+        }
+    
+        &__date {
+            display: inline-block;
+            padding-left: 22px;
+            position: relative;
+            color: $secondary;
+
+            &:before {
+                content: "";
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                top: 50%; left: 0;
+                background: url("../images/svg/clock.svg") 50% 50% no-repeat;
+                background-size: cover;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+
 .footer {
     color: $gray;
     background-color: $bgBlue;

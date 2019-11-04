@@ -19,14 +19,26 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 2.5rem;
+
+    @include respond(lg) {
+        font-size: 1.56rem;
+    }
 }
 
 h2 {
     font-size: 1.5625rem;
+    
+    @include respond(lg) {
+        font-size: 1.25rem;
+    }
 }
 
 h3 {
     font-size: 1.125rem;
+
+    @include respond(lg) {
+        font-size: 1rem;
+    }
 }
 
 h4, h5 {
@@ -110,6 +122,10 @@ b {
 .layoutCenter {
     max-width: 1140px;
     margin: 0 auto;
+
+    @include respond(lg) {
+        padding: 0px 15px;
+    }
 }
 
 .main {
@@ -180,6 +196,11 @@ b {
     path {
         fill: #1f5f7a;
     }
+
+    @include respond(lg) {
+        width: 36px;
+        height: 36px;
+    }
 }
 
 .clipboardIcon {
@@ -233,11 +254,17 @@ b {
     }
 }
 
+.hamburgerIcon {
+    width: 19px;
+    height: 13px;
+}
+
 .burgerIcon,
 .loginIcon,
 .userIcon,
 .searchIcon,
-.bookmarkIcon {
+.bookmarkIcon,
+.hamburgerIcon {
     fill: $gray;
         
     path {
@@ -257,13 +284,16 @@ b {
     }
 }
 
-.highlighted {
-    background-color: #ebebeb;
-}
-
 .breadcrumb {
     padding: 20px 0px;
     color: #ffffff;
+
+    @include respond(lg) {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 20px 36px;
+    }
 
     &__item {
         display: inline;

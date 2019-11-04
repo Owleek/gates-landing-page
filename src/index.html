@@ -22,6 +22,11 @@
         <div class="header__topBar">
             <div class="layoutCenter">
                 <div class="header__topBarContainer">
+                    <div class="header__menuToggler">
+                        <svg class="hamburgerIcon">
+                            <use xlink:href="#hamburger" />
+                        </svg>
+                    </div>
                     <nav class="nav header__nav">
                         <ul class="nav__list">
                             <li class="nav__item">
@@ -267,7 +272,7 @@
     <nav class="navBar">
         <div class="layoutCenter">
             <div class="navBar__inner">
-                <div class="catalogueMenu highlighted">
+                <div class="catalogueMenu">
                     <a href="">
                         <div class="catalogueMenu__inner">
                             <span class="catalogueMenu__icon">
@@ -318,6 +323,30 @@
                         </a>
                     </li>
                 </ul>
+                <div class="shoppingFunctions navBar__shoppingFunctions">
+                    <div class="shoppingFunctions__item">
+                        <a href="">
+                            <span class="shoppingFunctions__itemInner">
+                                <span class="shoppingFunctions__icon">
+                                    <svg class="clipboardIcon">
+                                        <use xlink:href="#clipboard" />
+                                    </svg>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="shoppingFunctions__item">
+                        <a href="">
+                            <span class="shoppingFunctions__itemInner">
+                                <span class="shoppingFunctions__icon">
+                                    <svg class="bookmarkIcon">
+                                        <use xlink:href="#bookmark" />
+                                    </svg>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div><!-- /navBar__inner -->
         </div><!-- /layoutCenter -->
     </nav>
@@ -337,7 +366,7 @@
                     </li>
                     <li class="breadcrumb__item breadcrumb__item_current">
                         Что такое автоматика для откатных ворот
-                        и как ее выбрать
+                        и&nbspкак ее выбрать
                     </li>
                 </ul>
                 <div class="postScreen__content">
@@ -411,11 +440,17 @@
                     оптимального качества жизни, в которой не должно быть препятствий, но есть хорошо продуманные
                     решения, простота и чувство
                 </p>
-                <p class="module_3_img">
-                    <img src="images/img-5.jpg" alt="" />
-                    <img src="images/img-3.jpg" alt="" />
-                    <img src="images/img-4.jpg" alt="" />
-                </p>
+                <div class="module_3_img">
+                    <p>
+                        <img src="images/img-5.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="images/img-3.jpg" alt="" />
+                    </p>
+                    <p>
+                        <img src="images/img-4.jpg" alt="" />
+                    </p>
+                </div>
                 <h2>А так же где-то с кем-то</h2>
                 <mark>
                     Благодаря универсальности и гибкости произ водимой продукции CAME смогла перейти от простой
@@ -428,14 +463,7 @@
                 <br />
                 <br />
                 <div class="anotherMaterials">
-                    <div class="anotherMaterials__heading">
-                        <h2>Похожие записи в блоге</h2>
-                        <div class="anotherMaterials__buttonHolder">
-                            <button class="button button_back">
-                                Вернуться в блог компании
-                            </button>
-                        </div>
-                    </div>
+                    <h2>Похожие записи в блоге</h2>
                     <div class="anotherMaterials__posts">
                         <ul class="post">
                             <li class="post__item">
@@ -504,6 +532,11 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="anotherMaterials__buttonHolder">
+                        <button class="button button_back">
+                            Вернуться в блог компании
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -513,11 +546,16 @@
             <div class="footer__content">
                 <div class="footer__feedbackColumn">
                     <div class="footer__logoHolder">
-                        <div class="logo">
+                        <div class="logo logo_large">
                             <a href="">
-                                <span class="logo__pic logo__pic_large">
-                                    <img src="images/logoGreen.png" alt="">
-                                </span>
+                                <div class="logo__inner">
+                                    <span class="logo__pic logo__pic_large">
+                                        <img src="images\logoGreen.png" alt="">
+                                    </span>
+                                    <span class="logo__text">
+                                        Индустрия Ворот
+                                    </span>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -747,36 +785,50 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer__email">
-                        <a href="">
-                            info@sitename.ru
-                        </a>
-                    </div>
-                    <div class="footer__paymentContainer">
-                        <span class="footer__paymentText">
-                            Способы оплаты
-                        </span>
-                        <div class="footer__payment">
-                            <span class="footer__paymentItem qiwi">
-                                <a href="">
-                                    <img src="images/qiwi.png" alt="">
-                                </a>
+                    <div class="footer__bottom">
+                        <div class="govBuy footer__govBuy">
+                            <a href="">
+                                <span class="govBuy__inner">
+                                    <span class="govBuy__pic">
+                                        <img src="images/community.png" alt="">
+                                    </span>
+                                    <span class="govBuy__text">
+                                        Гос. закупки
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="footer__email">
+                            <a href="">
+                                info@sitename.ru
+                            </a>
+                        </div>
+                        <div class="footer__paymentContainer">
+                            <span class="footer__paymentText">
+                                Способы оплаты
                             </span>
-                            <span class="footer__paymentItem visa">
-                                <a href="">
-                                    <img src="images/visa.png" alt="">
-                                </a>
-                            </span>
-                            <span class="footer__paymentItem masterCard">
-                                <a href="">
-                                    <img src="images/masterCard.png" alt="">
-                                </a>
-                            </span>
-                            <span class="footer__paymentItem payPal">
-                                <a href="">
-                                    <img src="images/payPal.png" alt="">
-                                </a>
-                            </span>
+                            <div class="footer__payment">
+                                <span class="footer__paymentItem qiwi">
+                                    <a href="">
+                                        <img src="images/qiwi.png" alt="">
+                                    </a>
+                                </span>
+                                <span class="footer__paymentItem visa">
+                                    <a href="">
+                                        <img src="images/visa.png" alt="">
+                                    </a>
+                                </span>
+                                <span class="footer__paymentItem masterCard">
+                                    <a href="">
+                                        <img src="images/masterCard.png" alt="">
+                                    </a>
+                                </span>
+                                <span class="footer__paymentItem payPal">
+                                    <a href="">
+                                        <img src="images/payPal.png" alt="">
+                                    </a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -787,6 +839,10 @@
         <symbol viewBox="0 0 444.815 444.815" id="arrow" xmlns="http://www.w3.org/2000/svg">
             <path
                 d="M421.976 196.712L236.111 10.848C228.884 3.615 220.219 0 210.131 0c-9.9 0-18.464 3.615-25.697 10.848L163.023 32.26c-7.234 6.853-10.85 15.418-10.85 25.697 0 10.277 3.616 18.842 10.85 25.697l83.653 83.937H45.677c-9.895 0-17.937 3.568-24.123 10.707s-9.279 15.752-9.279 25.837v36.546c0 10.088 3.094 18.698 9.279 25.837s14.228 10.704 24.123 10.704h200.995L163.02 360.88c-7.234 7.228-10.85 15.89-10.85 25.981 0 10.089 3.616 18.75 10.85 25.978l21.411 21.412c7.426 7.043 15.99 10.564 25.697 10.564 9.899 0 18.562-3.521 25.981-10.564l185.864-185.864c7.043-7.043 10.567-15.701 10.567-25.981 0-10.467-3.524-19.036-10.564-25.694z" />
+        </symbol>
+        <symbol viewBox="0 0 512 512" id="hamburger" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M491.318 235.318H20.682C9.26 235.318 0 244.577 0 256s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 78.439H20.682C9.26 78.439 0 87.699 0 99.121c0 11.422 9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.26 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 392.197H20.682C9.26 392.197 0 401.456 0 412.879s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682s-9.259-20.682-20.682-20.682z" />
         </symbol>
         <symbol viewBox="0 0 431.972 431.972" id="bookmark" xmlns="http://www.w3.org/2000/svg">
             <path

@@ -852,10 +852,16 @@
         @include respond(lg) {
             align-items: center;
         }
+
+        .footer__contacts {
+            @include respond(lg) {
+                display: none;
+            }
+        }
     }
 
     &__logoHolder {
-        margin-bottom: 25px;
+        margin-bottom: 28px;
 
         .logo__pic {
             @include respond(lg) {
@@ -916,7 +922,7 @@
         @include respond(lg) {
             font-size: 1rem;
             margin-bottom: 0;
-            margin-right: 30px;
+            margin-right: 20px;
         }
     }
 
@@ -1033,6 +1039,10 @@
 
     &__service {
         margin-bottom: 40px;
+
+        @include respond(lg) {
+            margin-bottom: 30px;
+        }
     }
 
     &__email {
@@ -1087,6 +1097,24 @@
             }
         }
 
+        .footer__govBuy, 
+        .footer__email,
+        .footer__paymentText {
+            @include respond(sm) {
+                margin-bottom: 24px;
+            }
+        }
+
+        .footer__contacts {
+            display: none;
+
+            @include respond(lg) {
+                display: block;
+            }
+        }
+    }
+
+    &__bottomInner {
         @include respond(sm) {
             display: flex;
             flex-direction: column;
@@ -1099,14 +1127,6 @@
             margin-left: -15px;
             padding-top: 35px;
             padding-bottom: 25px;
-        }
-
-        .footer__govBuy, 
-        .footer__email,
-        .footer__paymentText {
-            @include respond(sm) {
-                margin-bottom: 24px;
-            }
         }
     }
 

@@ -305,6 +305,8 @@
         }
 
         &_sigUp {}
+
+        line-height: 0;
     }
 
     &__itemInner {
@@ -455,13 +457,6 @@
 }
 
 .feedback {
-
-    &__item {}
-
-    &__itemInner{}
-      
-    &__icon {}
-
     &__text {
         &_underline {
             border-bottom: 1px solid #c7d8de;
@@ -543,7 +538,6 @@
         }
     }
     
-    
     &__designation {
         font-size: 1rem;
         font-family: 'Proxima Nova Lt';
@@ -556,17 +550,6 @@
         color: $secondary;
     }
 }
-
-.shoppingFunctions {
-    &__item {}
-
-    &__itemInner {}
-
-    &__icon {}
-
-    &__text {}
-}
-
 
 .navBar {
     font-family: 'Proxima Nova Lt', sans-serif;
@@ -591,7 +574,7 @@
             display: none;
             width: 300px;
             position: absolute;
-            left: 0; bottom: 0;
+            left: 0; bottom: 1px;
             transform: translateY(100%);
             background-color: #F0F0F0;
             box-shadow: 0px 12px 10px 2px rgba(0, 0, 0, 0.5);
@@ -682,8 +665,6 @@
             }
         }
     }
-
-    &:hover {}
 }
 
 .categories {
@@ -923,7 +904,6 @@
 
             a {
                 color: $blue;
-                // text-decoration: underline;
 
                &:visited {
                     color: $black;
@@ -1046,7 +1026,6 @@
         
         @include respond(lg) {
             display: flex;
-            // align-items: center;
         }
     }
 
@@ -1146,12 +1125,6 @@
         }
     }
 
-    &__categoryTitle {}
-
-    &__categoryList {}
-
-    &__categoryItem {}
-
     &__dualListContainer {
         display: flex;
 
@@ -1194,13 +1167,9 @@
         margin-bottom: 35px;
     }
 
-    &__paymentContainer {}
-
     &__paymentText {
         margin-bottom: 25px;
     }
-
-    &__payment {}
 
     &__paymentText,
     &__paymentItem {

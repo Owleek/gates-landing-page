@@ -31,6 +31,8 @@
         background-color: #274f64;
         cursor: pointer;
         padding: 15px;
+        position: relative;
+        z-index: 1000;
 
         @include respond(lg) {
             display: flex;
@@ -39,15 +41,120 @@
     }
 
     &__nav {
+        display: flex;
+
         .nav__item {
             &:not(:last-child) {
                 margin-right: 20px;
+
+                @include respond(lg) {
+                    margin-right: 0;
+                    margin-bottom: 15px;
+                }
+            }
+
+            @include respond(lg) {
+                max-width: 80%;
             }
         }
 
         @include respond(lg) {
             position: absolute;
-            top: -30px; left: 0;
+            z-index: 100;
+            top: 0px; left: 0;
+
+            &:before {
+                content: '';
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                left: 0px;
+                background: $bgBlue;
+                top: -100vh;
+                opacity: 0;
+                transition: opacity 0.5s ease 0s;
+            }
+        }
+
+        @include respond(lg) {
+            .nav__list {
+                display: none;
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                opacity: 0.97;
+                z-index: 101;
+                align-items: center;
+                padding-top: 60px;
+            }
+        }
+    }
+
+    &__dropdownMenu {
+        display: none;
+        width: 200px;
+        position: absolute;
+        right: -2px; bottom: 0;
+        transform: translateY(100%);
+        background-color: $bgBlue;
+        padding: 20px;
+        box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
+
+        @include respond(lg) {
+            display: block;
+            width: auto;
+            position: static;
+            transform: translateY(0);
+            background-color: transparent;
+            padding: 0;
+            box-shadow: none;;
+        }
+    }
+
+    &__dropdownList {}
+
+    &__dropdownItem {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__dropdownLink {
+        display: block;
+    }
+
+    .headerMenuDrop {
+        cursor: pointer;
+        white-space: nowrap;
+        display: flex;
+        align-self: stretch;
+        align-items: center;
+        position: relative;
+
+        
+        @include respond(lg) {
+            align-self: center;
+            text-align: center;
+        }
+    
+        &__subject {
+            margin-right: 12px;
+        }
+    
+        &__subject,
+        &__icon {
+            display: inline-block;
+            user-select: none;
+
+            @include respond(lg) {
+                display: none;
+            }
+        }
+    
+        &__icon {
+            font-size: 0;
         }
     }
 
@@ -173,29 +280,14 @@
 .nav {
     &__list {
         display: flex;
-        padding: 16px 0px;
+        align-items: center;
+
+        @include respond(lg) {
+            flex-direction: column;
+        }
     }
 
     &__item {}
-}
-
-.dropdown {
-    cursor: pointer;
-    white-space: nowrap;
-
-    &__subject {
-        margin-right: 12px;
-    }
-
-    &__subject,
-    &__icon {
-        display: inline-block;
-        user-select: none;
-    }
-
-    &__icon {
-        font-size: 0;
-    }
 }
 
 .auth {
@@ -485,12 +577,49 @@
 
     &__inner {
         display: flex;
+        position: relative;
 
         @include respond(lg) {
             justify-content: space-between;
             
             .shoppingFunctions__icon {
                 margin-right: 20px;
+            }
+        }
+
+        .catalogueDropdown {
+            display: none;
+            width: 300px;
+            position: absolute;
+            left: 0; bottom: 0;
+            transform: translateY(100%);
+            background-color: #F0F0F0;
+            box-shadow: 0px 12px 10px 2px rgba(0, 0, 0, 0.5);
+    
+            @include respond(md) {
+                width: 100vw;
+                min-width: 320px;
+                margin-left: -15px;
+            }
+    
+            .catalogueDrop {
+                padding-top: 0px;
+                padding-bottom: 15px;
+    
+                &__item {}
+    
+                &__link {
+                    display: block;
+                    padding: 20px 27px;
+    
+                    @include respond(md) {
+                        padding: 10px 27px;
+                    }
+    
+                    &:hover {
+                        background-color: rgb(224, 224, 224);
+                    }
+                }
             }
         }
     }
@@ -514,6 +643,8 @@
 .catalogueMenu {
     display: inline-block;  
     background-color: #ebebeb;
+    user-select: none;
+    cursor: pointer;
 
     @include respond(lg) {
         background-color: transparent;
@@ -538,7 +669,21 @@
         margin-right: 10px;
     }
     
-    &__title {}
+    &__title {
+        @include respond(lg) {
+            display: none;
+        }
+
+        &_mobile {
+            display: none;
+
+            @include respond(lg) {
+                display: inline-block;
+            }
+        }
+    }
+
+    &:hover {}
 }
 
 .categories {

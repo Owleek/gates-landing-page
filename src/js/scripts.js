@@ -1,18 +1,25 @@
 $(document).ready(function(){
-    const $catalogueMenuTitle = $(".catalogueMenu__title");
-    
-    if($(window).width() < 1200) {
-        $(".catalogueMenu__title").html("Каталог товаров");
-    } else {
-        $(".catalogueMenu__title").html("Все разделы каталога")
-    }
 
-    $( window ).resize(function() {
-        if($(window).width() < 1200) {
-            $(".catalogueMenu__title").html("Каталог товаров");
-        } else {
-            $(".catalogueMenu__title").html("Все разделы каталога")
-        }
+    $(".header__menuToggler").on("click", function(){
+        $("body").toggleClass("headerNavOpen");
     });
 
+    $(".catalogueMenu").on("click", function(){
+        $("body").toggleClass("catalogueDropdownOpen");
+        return false;
+    });
+
+    $(".headerMenuDrop").on("click", function(){
+        $("body").toggleClass("headerDropdownMenuOpen");
+        return false;
+    });
+
+
+    $("body").on("click", function(ee) {
+        if (!$(ee.target).is(".catalogueDropdown, .catalogueDropdown *") && $(".catalogueDropdown").is(":visible")) {
+            $("body").removeClass("catalogueDropdownOpen");
+        } else if (!$(ee.target).is(".header__dropdownMenu, .header__dropdownMenu *") && $(".header__dropdownMenu").is(":visible")) {
+            $("body").removeClass("headerDropdownMenuOpen");
+        }
+    });
 });

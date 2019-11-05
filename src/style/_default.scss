@@ -320,3 +320,35 @@ b {
         }
     }
 }
+
+.headerNavOpen {
+    overflow: hidden;
+
+    .header__nav {
+        .nav__list {
+            display: flex;
+        }
+    
+        &:before {
+            top: 0px;
+            opacity: 0.97;
+        }
+    }
+}
+
+.catalogueDropdownOpen {
+    .navBar__inner .catalogueDropdown {
+        display: block;
+    }
+
+    .catalogueMenu {
+        background-color: #F0F0F0;
+    }
+}
+
+.headerDropdownMenuOpen {
+    .header__dropdownMenu {
+        display: block;
+    }
+}
+

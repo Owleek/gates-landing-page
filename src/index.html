@@ -64,15 +64,34 @@
                                     Акции
                                 </a>
                             </li>
-                            <li class="nav__item dropdown">
-                                <div class="dropdown__subject">
+                            <li class="nav__item headerMenuDrop">
+                                <div class="headerMenuDrop__subject">
                                     Еще
                                 </div>
-                                <span class="dropdown__icon">
+                                <span class="headerMenuDrop__icon">
                                     <svg class="burgerIcon">
                                         <use xlink:href="#burgerMenu" />
                                     </svg>
                                 </span>
+                                <div class="header__dropdownMenu">
+                                    <ul class="header__dropdownList">
+                                        <li class="header__dropdownItem">
+                                            <a href="" class="header__dropdownLink">
+                                                Выгодные предложения
+                                            </a>
+                                        </li>
+                                        <li class="header__dropdownItem">
+                                            <a href="" class="header__dropdownLink">
+                                                Бонусы
+                                            </a>
+                                        </li>
+                                        <li class="header__dropdownItem">
+                                            <a href="" class="header__dropdownLink">
+                                                Еще какие то услуги
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                         </ul>
                     </nav>
@@ -272,19 +291,50 @@
     <nav class="navBar">
         <div class="layoutCenter">
             <div class="navBar__inner">
+                <div class="catalogueDropdown">
+                    <ul class="catalogueDrop">
+                        <li class="catalogueDrop__item">
+                            <a href="" class="catalogueDrop__link">
+                                Автоматика для ворот
+                            </a>
+                        </li>
+                        <li class="catalogueDrop__item">
+                            <a href="" class="catalogueDrop__link">
+                                Комплектующие для откатных ворот
+                            </a>
+                        </li>
+                        <li class="catalogueDrop__item">
+                            <a href="" class="catalogueDrop__link">
+                                Шлагбаумы
+                            </a>
+                        </li>
+                        <li class="catalogueDrop__item">
+                            <a href="" class="catalogueDrop__link">
+                                Пульты
+                            </a>
+                        </li>
+                        <li class="catalogueDrop__item">
+                            <a href="" class="catalogueDrop__link">
+                                Аксесуары
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="catalogueMenu">
-                    <a href="">
-                        <div class="catalogueMenu__inner">
-                            <span class="catalogueMenu__icon">
-                                <svg class="menuIcon">
-                                    <use xlink:href="#menu" />
-                                </svg>
-                            </span>
-                            <span class="catalogueMenu__title">
-                                Все разделы каталога
-                            </span>
-                        </div>
-                    </a>
+                    <div class="catalogueMenu__inner">
+                        <span class="catalogueMenu__icon">
+                            <svg class="menuIcon">
+                                <use xlink:href="#menu" />
+                            </svg>
+                        </span>
+                        <span class="catalogueMenu__title">
+                            Все разделы каталога
+                        </span>
+                        <span class="catalogueMenu__title catalogueMenu__title_mobile">
+                            Каталог товаров
+                        </span>
+                    </div>
+
                 </div>
                 <ul class="categories">
                     <li class="categories__item">
